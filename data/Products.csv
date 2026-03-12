@@ -1,0 +1,501 @@
+product_id,product_name,brand,product_category,mrp,stock_quantity,seasonality_score,average_daily_sales,conversion_rate,rating,number_of_reviews,is_prime_eligible
+P1001,Apple iPhone 17 Pro,Apple,Electronics,129999,85,0.72,38.5,4.6,4.8,12450,Yes
+P1002,Apple iPhone 16,Apple,Electronics,89999,120,0.68,31.2,4.2,4.7,10221,Yes
+P1003,Apple AirPods Pro (2nd Gen),Apple,Electronics,24999,200,0.65,44.7,6.1,4.7,8743,Yes
+P1004,Apple Watch Series 10,Apple,Electronics,45999,75,0.59,18.6,3.9,4.6,5120,Yes
+P1005,Apple MacBook Air M3,Apple,Electronics,134900,40,0.48,9.5,2.4,4.8,3290,Yes
+P1006,Samsung Galaxy S25 Ultra,Samsung,Electronics,124999,95,0.74,36.9,4.8,4.7,11432,Yes
+P1007,Samsung Galaxy S24,Samsung,Electronics,79999,140,0.63,28.4,4.1,4.6,8922,Yes
+P1008,Samsung Galaxy Buds2 Pro,Samsung,Electronics,14999,210,0.61,41.2,5.5,4.5,7431,Yes
+P1009,Samsung Galaxy Watch 7,Samsung,Electronics,32999,88,0.55,16.8,3.6,4.5,4203,Yes
+P1010,Samsung 55 Neo QLED TV,Samsung,Electronics,109999,30,0.46,6.5,1.8,4.6,2088,No
+P1011,boAt Airdopes 141,boAt,Electronics,1299,350,0.69,62.1,7.8,4.3,21544,Yes
+P1012,boAt Airdopes 170,boAt,Electronics,1499,320,0.71,58.3,7.1,4.2,18432,Yes
+P1013,boAt Rockerz 450,boAt,Electronics,1999,270,0.66,49.7,6.5,4.3,15643,Yes
+P1014,boAt Stone 350 Speaker,boAt,Electronics,1799,260,0.64,45.9,6.2,4.2,14320,Yes
+P1015,Sony WH-1000XM5 Headphones,Sony,Electronics,34990,60,0.52,14.6,3.4,4.8,5320,Yes
+P1016,Sony WF-1000XM5 Earbuds,Sony,Electronics,29990,70,0.51,15.2,3.3,4.7,4120,Yes
+P1017,Sony Bravia 65 OLED TV,Sony,Electronics,249999,20,0.42,3.8,1.2,4.8,1220,No
+P1018,Logitech MX Master 3S Mouse,Logitech,Electronics,9995,150,0.58,24.5,4,4.7,3321,Yes
+P1019,Logitech K380 Bluetooth Keyboard,Logitech,Electronics,3495,190,0.6,27.8,4.3,4.6,4022,Yes
+P1020,Logitech G Pro X Gaming Headset,Logitech,Electronics,12995,110,0.56,19.4,3.7,4.5,2210,Yes
+P1021,Dell XPS 13 Laptop,Dell,Electronics,139999,35,0.49,8.2,2.1,4.7,1780,Yes
+P1022,Dell Inspiron 15 Laptop,Dell,Electronics,65999,75,0.53,13.6,2.8,4.5,3102,Yes
+P1023,Dell Alienware M16 Gaming Laptop,Dell,Electronics,219999,25,0.44,4.9,1.5,4.7,1203,No
+P1024,HP Pavilion 14 Laptop,HP,Electronics,71999,80,0.55,14.1,2.9,4.5,2876,Yes
+P1025,HP Victus Gaming Laptop,HP,Electronics,89999,60,0.51,10.8,2.5,4.6,2144,Yes
+P1026,HP DeskJet 2723 Printer,HP,Electronics,4999,140,0.62,23.7,4.1,4.3,5210,Yes
+P1027,Lenovo IdeaPad Slim 5,Lenovo,Electronics,64999,90,0.57,16.2,3,4.5,3040,Yes
+P1028,Lenovo Legion 5 Gaming Laptop,Lenovo,Electronics,129999,45,0.47,7.4,2,4.6,1982,Yes
+P1029,Canon EOS 1500D DSLR,Canon,Electronics,38999,55,0.5,9.6,2.3,4.6,2655,Yes
+P1030,Canon EOS R50 Camera,Canon,Electronics,78999,35,0.48,6.1,1.9,4.7,1402,Yes
+P1031,Nike Air Force 1,Nike,Fashion,7495,210,0.73,34.8,5.1,4.6,11320,Yes
+P1032,Nike Air Max 270,Nike,Fashion,11995,180,0.69,29.5,4.6,4.6,9871,Yes
+P1033,Nike Revolution 6 Running Shoes,Nike,Fashion,3995,250,0.67,42.3,5.8,4.4,8450,Yes
+P1034,Nike Dri-FIT Training T-Shirt,Nike,Fashion,1995,300,0.7,47.1,6.2,4.5,7320,Yes
+P1035,Adidas Ultraboost 22,Adidas,Fashion,15999,120,0.68,21.4,3.9,4.6,6540,Yes
+P1036,Adidas Duramo SL Shoes,Adidas,Fashion,4999,220,0.66,33.7,4.8,4.4,5321,Yes
+P1037,Adidas Own The Run T-Shirt,Adidas,Fashion,2499,260,0.72,39.2,5.5,4.5,4211,Yes
+P1038,Adidas Adilette Comfort Slides,Adidas,Fashion,2999,190,0.64,26.9,4.1,4.4,2982,Yes
+P1039,Puma Smash v2 Sneakers,Puma,Fashion,4499,200,0.65,28.3,4.3,4.4,3104,Yes
+P1040,Puma Evostripe T-Shirt,Puma,Fashion,1799,270,0.71,41.5,5.7,4.3,2560,Yes
+P1041,Nike Pegasus 40 Running Shoes,Nike,Fashion,11995,175,0.69,28.1,4.4,4.6,8421,Yes
+P1042,Nike Sportswear Club Hoodie,Nike,Fashion,4495,210,0.71,33.7,4.9,4.5,5312,Yes
+P1043,Adidas Ultraboost Light,Adidas,Fashion,17999,95,0.64,19.4,3.8,4.7,2981,Yes
+P1044,Adidas Essentials Logo T-Shirt,Adidas,Fashion,1799,260,0.73,42.5,5.7,4.5,4102,Yes
+P1045,Puma Flyer Flex Running Shoes,Puma,Fashion,3999,220,0.66,30.8,4.2,4.4,2760,Yes
+P1046,Puma Essentials Small Logo Tee,Puma,Fashion,1499,280,0.7,38.4,5.2,4.3,2331,Yes
+P1047,Apple iPad 10th Gen,Apple,Electronics,44900,70,0.55,17.2,3.4,4.7,3650,Yes
+P1048,Apple Magic Keyboard,Apple,Electronics,9999,140,0.58,24.6,4.1,4.6,2890,Yes
+P1049,Apple MagSafe Charger,Apple,Electronics,4499,200,0.61,29.5,4.8,4.6,4120,Yes
+P1050,Samsung Galaxy Tab S9,Samsung,Electronics,72999,45,0.49,9.4,2.5,4.6,1874,Yes
+P1051,Samsung 65 Crystal UHD TV,Samsung,Electronics,84999,35,0.46,7.2,1.9,4.5,1653,No
+P1052,Samsung T7 Portable SSD 1TB,Samsung,Electronics,8999,150,0.6,26.3,4.4,4.7,4211,Yes
+P1053,boAt Airdopes 441,boAt,Electronics,1999,310,0.68,53.1,6.9,4.2,16420,Yes
+P1054,boAt BassHeads 100 Earphones,boAt,Electronics,499,420,0.72,71.5,8.1,4.1,21430,Yes
+P1055,Sony SRS-XB13 Bluetooth Speaker,Sony,Electronics,3990,160,0.62,27.9,4.5,4.6,3891,Yes
+P1056,Sony Alpha ZV-E10 Camera,Sony,Electronics,69990,40,0.5,8.3,2.3,4.7,1210,Yes
+P1057,Logitech G502 Hero Gaming Mouse,Logitech,Electronics,4995,130,0.59,21.6,3.8,4.7,5422,Yes
+P1058,Logitech C920 HD Webcam,Logitech,Electronics,7995,120,0.57,19.8,3.5,4.6,3102,Yes
+P1059,Dell UltraSharp 27 Monitor,Dell,Electronics,45999,55,0.53,11.4,2.7,4.7,1780,Yes
+P1060,HP Envy x360 Laptop,HP,Electronics,87999,60,0.52,12.1,2.6,4.6,2243,Yes
+P1061,Lenovo ThinkPad E14,Lenovo,Electronics,79999,65,0.54,13.3,2.9,4.7,1981,Yes
+P1062,Canon PIXMA G3020 Printer,Canon,Electronics,14999,90,0.58,18.7,3.2,4.4,2577,Yes
+P1063,Nike Zoom Fly 5,Nike,Fashion,13995,120,0.65,22.9,3.9,4.6,3560,Yes
+P1064,Nike Gym Club Duffel Bag,Nike,Fashion,2995,200,0.67,29.6,4.3,4.5,2870,Yes
+P1065,Adidas Samba OG Shoes,Adidas,Fashion,9999,160,0.68,27.5,4.1,4.7,4022,Yes
+P1066,Adidas Linear Backpack,Adidas,Fashion,2499,210,0.7,31.2,4.6,4.5,2651,Yes
+P1067,Puma Future Rider Sneakers,Puma,Fashion,5999,150,0.64,23.8,3.7,4.4,2100,Yes
+P1068,Puma Phase Backpack,Puma,Fashion,1999,220,0.69,30.4,4.4,4.3,1985,Yes
+P1069,Apple AirTag 4 Pack,Apple,Electronics,10900,110,0.56,18.5,3.6,4.7,3020,Yes
+P1070,Apple 20W USB-C Power Adapter,Apple,Electronics,1999,260,0.62,36.9,5,4.6,4121,Yes
+P1071,Samsung 45W USB-C Charger,Samsung,Electronics,3499,180,0.6,28.1,4.2,4.6,2750,Yes
+P1072,Samsung SmartThings Hub,Samsung,Electronics,8999,70,0.48,10.2,2.3,4.5,980,Yes
+P1073,boAt Wave Call Smartwatch,boAt,Electronics,2999,240,0.71,44.5,5.9,4.2,12450,Yes
+P1074,boAt Storm Call Smartwatch,boAt,Electronics,2499,250,0.7,41.7,5.7,4.1,11234,Yes
+P1075,Sony WH-CH720N Headphones,Sony,Electronics,9990,90,0.55,16.4,3.3,4.6,1802,Yes
+P1076,Logitech Pebble M350 Mouse,Logitech,Electronics,2495,170,0.63,25.8,4.1,4.6,3020,Yes
+P1077,Dell KM5221W Wireless Keyboard Mouse,Dell,Electronics,2999,150,0.61,24.2,4,4.4,2155,Yes
+P1078,HP M24f FHD Monitor,HP,Electronics,13999,85,0.54,14.1,3,4.5,1870,Yes
+P1079,Lenovo Tab M10,Lenovo,Electronics,18999,95,0.57,16.8,3.2,4.4,1640,Yes
+P1080,Canon RF 50mm f1.8 Lens,Canon,Electronics,20999,60,0.52,11.7,2.8,4.7,1231,Yes
+P1081,Nike Everyday Cushioned Socks,Nike,Fashion,1295,300,0.74,49.8,6.3,4.5,4210,Yes
+P1082,Nike Heritage Waistpack,Nike,Fashion,1695,250,0.72,40.5,5.8,4.4,3420,Yes
+P1083,Adidas Training Shorts,Adidas,Fashion,1999,230,0.7,36.9,5.4,4.4,2981,Yes
+P1084,Adidas Performance Cap,Adidas,Fashion,1499,210,0.69,33.4,5.1,4.3,2104,Yes
+P1085,Puma Active Training Pants,Puma,Fashion,2499,190,0.67,28.3,4.2,4.3,1876,Yes
+P1086,Puma Sports Cap,Puma,Fashion,1199,240,0.71,37.2,5.5,4.2,1650,Yes
+P1087,Apple HomePod Mini,Apple,Electronics,10900,95,0.55,17.9,3.4,4.6,2143,Yes
+P1088,Apple Lightning to USB Cable,Apple,Electronics,1999,220,0.61,34.8,4.9,4.6,2980,Yes
+P1089,Samsung Smart Monitor M7,Samsung,Electronics,32999,65,0.5,12.5,2.6,4.6,1432,Yes
+P1090,Samsung Galaxy SmartTag2,Samsung,Electronics,2999,160,0.58,23.7,3.9,4.5,1765,Yes
+P1091,boAt Stone 1200 Speaker,boAt,Electronics,6999,140,0.63,22.1,3.8,4.4,3210,Yes
+P1092,boAt Immortal 131 Gaming Earbuds,boAt,Electronics,2499,210,0.67,35.9,5,4.2,5420,Yes
+P1093,Sony PS5 DualSense Controller,Sony,Electronics,6490,110,0.59,21.4,3.7,4.8,4980,Yes
+P1094,Logitech StreamCam Webcam,Logitech,Electronics,14995,80,0.53,13.7,3.1,4.6,1204,Yes
+P1095,Dell WD19 Docking Station,Dell,Electronics,18999,55,0.49,9.1,2.4,4.6,870,Yes
+P1096,HP 410 Slim Wireless Mouse,HP,Electronics,1299,200,0.64,29.6,4.5,4.4,2310,Yes
+P1097,Lenovo Legion Gaming Mouse,Lenovo,Electronics,2999,140,0.6,22.3,3.8,4.5,1654,Yes
+P1098,Canon EOS R10 Camera,Canon,Electronics,98999,30,0.47,5.2,1.8,4.7,920,Yes
+P1099,Nike Yoga Mat,Nike,Fashion,2495,180,0.66,26.5,4.2,4.5,2011,Yes
+P1100,Adidas Training Mat,Adidas,Fashion,2299,170,0.65,24.9,4,4.4,1870,Yes
+P1101,Puma Fitness Gloves,Puma,Fashion,1299,220,0.7,32.1,4.9,4.3,1765,Yes
+P1102,Apple Studio Display,Apple,Electronics,159900,25,0.43,4.1,1.4,4.8,630,No
+P1103,Samsung Odyssey G5 Gaming Monitor,Samsung,Electronics,27999,70,0.52,12.9,2.8,4.6,1210,Yes
+P1104,boAt Nirvana Ion Earbuds,boAt,Electronics,2999,210,0.69,36.2,5.1,4.3,4980,Yes
+P1105,Sony Inzone H3 Gaming Headset,Sony,Electronics,8990,90,0.56,17.5,3.5,4.6,1022,Yes
+P1106,Logitech G213 Prodigy Keyboard,Logitech,Electronics,4495,120,0.58,20.4,3.7,4.5,2200,Yes
+P1107,Dell SE2422H Monitor,Dell,Electronics,9999,110,0.57,19.6,3.4,4.4,2011,Yes
+P1108,HP Smart Tank 520 Printer,HP,Electronics,16999,85,0.54,15.3,3.1,4.5,1500,Yes
+P1109,Lenovo Yoga Slim 7,Lenovo,Electronics,104999,40,0.49,8.4,2.2,4.6,980,Yes
+P1110,Canon RF 24-105mm Lens,Canon,Electronics,99999,20,0.44,3.9,1.5,4.7,560,Yes
+P1111,Nike Flex Training Shorts,Nike,Fashion,2195,230,0.72,37.4,5.4,4.4,1760,Yes
+P1112,Adidas Aeroready Tank Top,Adidas,Fashion,1899,240,0.71,35.6,5.2,4.4,1621,Yes
+P1113,Puma Running Visor,Puma,Fashion,999,260,0.73,39.2,5.8,4.2,1480,Yes
+P1114,Apple Pencil 2nd Gen,Apple,Electronics,11900,120,0.59,23.1,3.8,4.7,2654,Yes
+P1115,Samsung Galaxy Book3 Laptop,Samsung,Electronics,89999,50,0.51,11.6,2.6,4.6,1422,Yes
+P1116,boAt Rockerz 551 ANC,boAt,Electronics,3499,190,0.68,33.9,4.9,4.3,3120,Yes
+P1117,Sony ULT Field 1 Speaker,Sony,Electronics,7990,110,0.6,21.7,3.8,4.5,1402,Yes
+P1118,Logitech G733 Wireless Headset,Logitech,Electronics,14995,70,0.55,14.2,3.3,4.6,980,Yes
+P1119,Dell Latitude 5440 Laptop,Dell,Electronics,119999,35,0.47,7.5,2,4.6,760,Yes
+P1120,HP OMEN Gaming Mouse,HP,Electronics,3499,140,0.61,23.8,3.9,4.5,1320,Yes
+P1121,Lenovo ThinkVision T24 Monitor,Lenovo,Electronics,14999,95,0.58,17.1,3.2,4.5,1120,Yes
+P1122,Canon Speedlite 430EX III Flash,Canon,Electronics,25999,60,0.53,11.2,2.8,4.6,840,Yes
+P1123,Nike Running Headband,Nike,Fashion,795,300,0.75,52.3,6.7,4.4,2100,Yes
+P1124,Adidas Sports Wristband,Adidas,Fashion,699,320,0.74,55.1,7,4.3,1980,Yes
+P1125,Puma Gym Water Bottle,Puma,Fashion,599,350,0.76,60.2,7.5,4.2,1840,Yes
+P1126,Apple Mac Mini M2,Apple,Electronics,59900,45,0.5,9.7,2.5,4.7,1320,Yes
+P1127,Samsung 980 Pro NVMe SSD 1TB,Samsung,Electronics,12999,130,0.62,24.5,4.1,4.7,3120,Yes
+P1128,boAt Wave Sigma Smartwatch,boAt,Electronics,2499,220,0.7,39.1,5.6,4.2,7200,Yes
+P1129,Sony WH-XB910N Headphones,Sony,Electronics,12990,85,0.56,16.7,3.4,4.6,1430,Yes
+P1130,Logitech Lift Vertical Mouse,Logitech,Electronics,6995,110,0.59,21.3,3.8,4.6,1780,Yes
+P1131,Dell S2721DGF Gaming Monitor,Dell,Electronics,42999,55,0.51,10.9,2.6,4.7,980,Yes
+P1132,HP Spectre x360 Laptop,HP,Electronics,149999,25,0.45,5.3,1.7,4.7,610,Yes
+P1133,Lenovo Legion K500 Keyboard,Lenovo,Electronics,5999,130,0.6,22.7,3.9,4.5,1540,Yes
+P1134,Canon EOS R6 Mark II,Canon,Electronics,239999,18,0.42,3.2,1.3,4.8,480,No
+P1135,Nike Metcon 9 Training Shoes,Nike,Fashion,12995,140,0.67,24.4,4.1,4.6,2200,Yes
+P1136,Adidas Powerlift Weightlifting Shoes,Adidas,Fashion,9999,120,0.65,21.7,3.9,4.6,1850,Yes
+P1137,Puma Fit Poly Track Jacket,Puma,Fashion,3999,160,0.66,25.1,4.2,4.3,1320,Yes
+P1138,Apple USB-C to HDMI Adapter,Apple,Electronics,6999,150,0.61,26.8,4.3,4.6,1980,Yes
+P1139,Samsung Smart Keyboard Trio 500,Samsung,Electronics,4999,140,0.59,23.9,3.9,4.5,1420,Yes
+P1140,boAt Immortal 171 Gaming Headset,boAt,Electronics,2499,210,0.69,35.7,5.1,4.2,3100,Yes
+P1141,Sony LinkBuds S Earbuds,Sony,Electronics,16990,95,0.55,17.8,3.4,4.6,1220,Yes
+P1142,Logitech MK850 Performance Combo,Logitech,Electronics,8995,90,0.57,18.4,3.5,4.6,980,Yes
+P1143,Dell Pro Stereo Soundbar, Dell,Electronics,3999,130,0.6,22.5,3.8,4.4,1100,Yes
+P1144,HP Reverb G2 VR Headset,HP,Electronics,69999,30,0.46,6.1,1.9,4.5,520,No
+P1145,Lenovo Smart Clock 2,Lenovo,Electronics,6999,110,0.58,19.3,3.6,4.4,860,Yes
+P1146,Canon RF 85mm f2 Macro Lens,Canon,Electronics,52999,35,0.52,9.4,2.7,4.7,740,Yes
+P1147,Nike Sports Gym Sack,Nike,Fashion,1295,260,0.73,41.2,5.9,4.4,1760,Yes
+P1148,Adidas Classic 3-Stripes Backpack,Adidas,Fashion,2999,200,0.71,33.6,5.2,4.5,1520,Yes
+P1149,Puma Running Arm Band,Puma,Fashion,999,280,0.74,44.8,6.3,4.2,1380,Yes
+P1150,Apple AirPods Max,Apple,Electronics,59900,50,0.48,10.5,2.6,4.7,2100,Yes
+P1151,Apple MacBook Pro 14 M3,Apple,Electronics,199900,28,0.47,6.8,1.9,4.8,1840,Yes
+P1152,Apple MacBook Pro 16 M3 Max,Apple,Electronics,349900,18,0.42,3.2,1.2,4.9,920,No
+P1153,Apple iPad Pro 11 M4,Apple,Electronics,99900,35,0.5,8.6,2.3,4.8,1120,Yes
+P1154,Apple iPad Pro 13 M4,Apple,Electronics,129900,30,0.49,7.9,2.1,4.8,980,Yes
+P1155,Apple Magic Trackpad,Apple,Electronics,12900,120,0.59,22.4,3.7,4.7,2650,Yes
+P1156,Samsung Galaxy Z Fold6,Samsung,Electronics,164999,25,0.45,5.4,1.7,4.7,870,Yes
+P1157,Samsung Galaxy Z Flip6,Samsung,Electronics,99999,38,0.48,7.8,2.1,4.6,1320,Yes
+P1158,Samsung Galaxy Buds FE,Samsung,Electronics,9999,150,0.61,26.9,4.2,4.5,2980,Yes
+P1159,Samsung Smart Monitor M8,Samsung,Electronics,49999,60,0.53,12.6,2.8,4.6,1010,Yes
+P1160,Samsung 32 Odyssey Gaming Monitor,Samsung,Electronics,37999,55,0.51,11.1,2.6,4.6,950,Yes
+P1161,boAt Rockerz 255 Pro Plus,boAt,Electronics,1499,260,0.71,41.7,5.9,4.2,10220,Yes
+P1162,boAt Airdopes 381,boAt,Electronics,1799,240,0.69,38.9,5.6,4.2,9820,Yes
+P1163,boAt PartyPal 60 Speaker,boAt,Electronics,5999,130,0.63,21.8,3.7,4.3,2110,Yes
+P1164,boAt Wave Neo Smartwatch,boAt,Electronics,2299,210,0.7,36.4,5.3,4.1,8210,Yes
+P1165,Sony Bravia 55 OLED A80L,Sony,Electronics,189999,20,0.44,4.7,1.5,4.8,650,No
+P1166,Sony Alpha A7 IV Camera,Sony,Electronics,242999,15,0.4,2.9,1.1,4.9,480,No
+P1167,Sony SRS-XG300 Speaker,Sony,Electronics,26990,75,0.56,16.4,3.3,4.6,1320,Yes
+P1168,Sony INZONE M3 Gaming Monitor,Sony,Electronics,59990,35,0.5,9.2,2.2,4.6,720,Yes
+P1169,Logitech G305 Lightspeed Mouse,Logitech,Electronics,4495,160,0.61,27.5,4.4,4.6,3210,Yes
+P1170,Logitech K780 Multi Device Keyboard,Logitech,Electronics,6995,130,0.58,23.2,3.9,4.6,2110,Yes
+P1171,Dell G15 Gaming Laptop,Dell,Electronics,104999,42,0.49,9.1,2.4,4.5,1450,Yes
+P1172,Dell P2422H Monitor,Dell,Electronics,17999,90,0.55,16.9,3.2,4.5,1230,Yes
+P1173,HP EliteBook 840 G10,HP,Electronics,134999,30,0.46,6.7,1.9,4.6,720,Yes
+P1174,HP OMEN 27 Gaming Monitor,HP,Electronics,34999,60,0.52,11.8,2.7,4.6,920,Yes
+P1175,Lenovo Legion Pro 5 Laptop,Lenovo,Electronics,159999,26,0.47,6.2,1.8,4.7,810,Yes
+P1176,Lenovo IdeaPad Gaming 3,Lenovo,Electronics,89999,48,0.5,10.1,2.5,4.5,1450,Yes
+P1177,Canon EOS R8 Camera,Canon,Electronics,169999,20,0.43,4.5,1.6,4.8,620,Yes
+P1178,Canon RF 70-200mm Lens,Canon,Electronics,229999,12,0.39,2.1,1,4.9,310,No
+P1179,Nike Air Zoom Structure 25,Nike,Fashion,11995,150,0.67,25.4,4.1,4.6,2100,Yes
+P1180,Nike Sportswear Tech Fleece Hoodie,Nike,Fashion,8995,170,0.69,28.7,4.4,4.6,2430,Yes
+P1181,Nike Brasilia Training Backpack,Nike,Fashion,2995,220,0.71,34.6,5.2,4.5,3200,Yes
+P1182,Adidas Terrex AX4 Hiking Shoes,Adidas,Fashion,10999,140,0.65,22.3,3.9,4.6,1750,Yes
+P1183,Adidas Adizero Boston 12,Adidas,Fashion,13999,120,0.64,20.1,3.7,4.6,1600,Yes
+P1184,Adidas Training Duffel Bag,Adidas,Fashion,3499,210,0.7,33.9,5,4.5,1980,Yes
+P1185,Puma RS-X Sneakers,Puma,Fashion,7999,160,0.66,24.7,4,4.4,1700,Yes
+P1186,Puma Velocity Nitro 2,Puma,Fashion,9999,140,0.65,22.1,3.8,4.5,1580,Yes
+P1187,Puma Gym Training Backpack,Puma,Fashion,2799,200,0.69,31.6,4.7,4.3,1760,Yes
+P1188,Apple USB-C Digital AV Adapter,Apple,Electronics,6900,150,0.6,27.1,4.3,4.6,2140,Yes
+P1189,Samsung Portable SSD T9 2TB,Samsung,Electronics,22999,90,0.57,18.4,3.6,4.7,1120,Yes
+P1190,boAt Immortal 201 Gaming Earbuds,boAt,Electronics,2999,210,0.7,35.2,5.4,4.2,3320,Yes
+P1191,Sony ULT Wear Headphones,Sony,Electronics,19990,85,0.55,16.8,3.3,4.6,980,Yes
+P1192,Logitech BRIO 4K Webcam,Logitech,Electronics,18995,75,0.52,14.3,3.1,4.6,840,Yes
+P1193,Dell Alienware AW2723DF Monitor,Dell,Electronics,69999,28,0.47,6.1,1.8,4.7,640,Yes
+P1194,HP Smart Tank 7301 Printer,HP,Electronics,22999,80,0.54,15.2,3,4.5,930,Yes
+P1195,Lenovo ThinkPad X13 Gen 4,Lenovo,Electronics,159999,22,0.45,5,1.6,4.7,520,Yes
+P1196,Canon RF 35mm f1.8 Macro Lens,Canon,Electronics,44999,55,0.52,10.6,2.8,4.7,760,Yes
+P1197,Nike Pro Compression Tights,Nike,Fashion,3495,210,0.71,36.1,5.1,4.4,2120,Yes
+P1198,Adidas Aeroready Training Pants,Adidas,Fashion,3299,200,0.7,33.8,4.8,4.4,1980,Yes
+P1199,Puma Essentials Logo Hoodie,Puma,Fashion,3999,180,0.68,29.5,4.5,4.3,1870,Yes
+P1200,Apple AirPods 4th Generation,Apple,Electronics,19999,120,0.59,23.4,3.9,4.7,1500,Yes
+P1201,Apple MacBook Air 15 M3,Apple,Electronics,159900,32,0.48,7.4,2,4.8,920,Yes
+P1202,Apple Studio Display Nano Texture,Apple,Electronics,189900,18,0.41,3.5,1.3,4.8,410,No
+P1203,Apple iPad Air 13 M2,Apple,Electronics,79900,40,0.5,9.1,2.4,4.7,1050,Yes
+P1204,Apple Magic Mouse USB-C,Apple,Electronics,8900,150,0.6,26.2,4.2,4.6,2300,Yes
+P1205,Apple AirPods Pro USB-C,Apple,Electronics,25900,120,0.58,22.8,3.8,4.7,1880,Yes
+P1206,Samsung Galaxy S25,Samsung,Electronics,84999,70,0.55,16.5,3.3,4.6,980,Yes
+P1207,Samsung Galaxy Book4 Pro,Samsung,Electronics,124999,30,0.46,6.2,1.9,4.6,640,Yes
+P1208,Samsung 990 Pro NVMe SSD 2TB,Samsung,Electronics,23999,110,0.59,21.7,3.9,4.7,1540,Yes
+P1209,Samsung Galaxy Fit3,Samsung,Electronics,5999,180,0.64,28.3,4.6,4.4,2120,Yes
+P1210,Samsung 34 Odyssey OLED G8,Samsung,Electronics,99999,22,0.43,4.1,1.4,4.7,420,No
+P1211,boAt Airdopes Alpha,boAt,Electronics,1699,260,0.71,40.5,5.8,4.2,8100,Yes
+P1212,boAt Rockerz Trinity,boAt,Electronics,1999,240,0.7,37.2,5.5,4.2,7200,Yes
+P1213,boAt Stone Ignite Speaker,boAt,Electronics,3499,160,0.63,23.1,3.9,4.3,2410,Yes
+P1214,boAt Wave Elevate Smartwatch,boAt,Electronics,2799,210,0.69,34.7,5.2,4.2,5300,Yes
+P1215,Sony WH-ULT900N Headphones,Sony,Electronics,22990,80,0.54,15.4,3.2,4.6,760,Yes
+P1216,Sony Bravia 75 Mini LED TV,Sony,Electronics,299999,12,0.39,2.1,0.9,4.8,210,No
+P1217,Sony Alpha FX30 Cinema Camera,Sony,Electronics,214999,14,0.41,2.6,1,4.9,320,No
+P1218,Sony SRS-XB43 Speaker,Sony,Electronics,19990,90,0.57,18.6,3.6,4.6,1320,Yes
+P1219,Logitech MX Keys S Keyboard,Logitech,Electronics,12995,110,0.6,22.7,4,4.7,1650,Yes
+P1220,Logitech G915 TKL Keyboard,Logitech,Electronics,23995,70,0.55,15.9,3.4,4.7,980,Yes
+P1221,Dell Inspiron 14 Plus,Dell,Electronics,94999,38,0.48,8.3,2.2,4.5,720,Yes
+P1222,Dell UltraSharp 32 Monitor,Dell,Electronics,79999,26,0.46,6.1,1.9,4.7,410,Yes
+P1223,HP Victus 16 Gaming Laptop,HP,Electronics,114999,34,0.47,7.8,2.1,4.6,840,Yes
+P1224,HP EliteDisplay E27 Monitor,HP,Electronics,21999,90,0.56,17.4,3.3,4.5,940,Yes
+P1225,Lenovo Yoga Pro 7 Laptop,Lenovo,Electronics,129999,30,0.46,6.9,1.9,4.6,680,Yes
+P1226,Lenovo Legion R27 Gaming Monitor,Lenovo,Electronics,29999,60,0.52,11.7,2.6,4.6,520,Yes
+P1227,Canon EOS R5 Camera,Canon,Electronics,339999,10,0.38,1.7,0.8,4.9,260,No
+P1228,Canon RF 24-70mm f2.8 Lens,Canon,Electronics,189999,15,0.41,2.5,1,4.9,310,No
+P1229,Nike Air Zoom Pegasus Trail 4,Nike,Fashion,12995,140,0.66,24.1,4.1,4.6,1840,Yes
+P1230,Nike Dri-FIT Running Jacket,Nike,Fashion,5995,170,0.68,27.6,4.4,4.5,1980,Yes
+P1231,Nike Sports Duffel Medium,Nike,Fashion,3495,200,0.7,31.5,4.9,4.5,2100,Yes
+P1232,Adidas Solar Glide 6,Adidas,Fashion,11999,130,0.65,22.4,3.9,4.6,1520,Yes
+P1233,Adidas Essentials Tracksuit,Adidas,Fashion,6999,150,0.67,24.8,4.2,4.5,1620,Yes
+P1234,Adidas Training Backpack Prime,Adidas,Fashion,3999,190,0.69,29.6,4.7,4.5,1480,Yes
+P1235,Puma Deviate Nitro 2,Puma,Fashion,12999,120,0.64,21.3,3.8,4.5,1400,Yes
+P1236,Puma Essentials Sweatpants,Puma,Fashion,3499,170,0.68,27.1,4.4,4.3,1650,Yes
+P1237,Puma Training Gym Duffel,Puma,Fashion,2999,200,0.69,30.5,4.6,4.4,1420,Yes
+P1238,Apple USB-C to SD Card Reader,Apple,Electronics,3900,160,0.61,25.7,4.1,4.6,1980,Yes
+P1239,Samsung SmartThings Station,Samsung,Electronics,7999,120,0.58,20.2,3.6,4.5,840,Yes
+P1240,boAt Immortal 301 Gaming Headset,boAt,Electronics,3499,170,0.67,28.4,4.8,4.2,2900,Yes
+P1241,Sony LinkBuds Open,Sony,Electronics,19990,75,0.54,15.6,3.3,4.6,640,Yes
+P1242,Logitech Pop Keys Keyboard,Logitech,Electronics,9995,120,0.59,21.9,3.8,4.6,880,Yes
+P1243,Dell Thunderbolt Dock WD22TB4,Dell,Electronics,24999,60,0.53,12.4,2.9,4.6,420,Yes
+P1244,HP Smart Tank 790 Printer,HP,Electronics,27999,70,0.54,13.2,3,4.5,520,Yes
+P1245,Lenovo ThinkPad P16 Workstation,Lenovo,Electronics,299999,14,0.41,2.3,1,4.8,310,No
+P1246,Canon RF 100-400mm Lens,Canon,Electronics,79999,40,0.5,9.8,2.6,4.7,610,Yes
+P1247,Nike Yoga Training Shorts,Nike,Fashion,2495,200,0.71,33.1,5,4.4,1420,Yes
+P1248,Adidas Performance Wrist Straps,Adidas,Fashion,899,280,0.74,46.5,6.3,4.3,1750,Yes
+P1249,Puma Sports Training Gloves,Puma,Fashion,1499,240,0.72,39.2,5.7,4.2,1620,Yes
+P1250,Apple Vision Pro Headset,Apple,Electronics,349900,8,0.35,1.1,0.6,4.8,180,No
+P1251,Samsung Galaxy Ring,Samsung,Electronics,34999,55,0.52,11.6,2.7,4.5,540,Yes
+P1252,boAt PartyPal 200 Speaker,boAt,Electronics,9999,120,0.63,20.3,3.6,4.3,1420,Yes
+P1253,Sony Inzone Buds Gaming Earbuds,Sony,Electronics,19990,80,0.55,16.1,3.2,4.6,680,Yes
+P1254,Logitech Zone Vibe 100 Headset,Logitech,Electronics,8995,110,0.58,21.2,3.7,4.5,720,Yes
+P1255,Dell Alienware Aurora R16 Desktop,Dell,Electronics,249999,16,0.42,2.9,1.2,4.7,380,No
+P1256,HP Omen 45L Gaming Desktop,HP,Electronics,289999,14,0.41,2.5,1.1,4.7,340,No
+P1257,Lenovo Legion Tower 7 Desktop,Lenovo,Electronics,269999,15,0.41,2.6,1.1,4.7,360,No
+P1258,Canon RF 16mm f2.8 Lens,Canon,Electronics,32999,75,0.55,15.9,3.4,4.7,880,Yes
+P1259,Nike Court Vision Low,Nike,Fashion,5495,180,0.69,28.2,4.6,4.5,2100,Yes
+P1260,Adidas Grand Court 2.0,Adidas,Fashion,4999,200,0.7,31.1,4.9,4.5,2200,Yes
+P1261,Puma Club II Era Sneakers,Puma,Fashion,4799,210,0.71,32.4,5,4.4,1980,Yes
+P1262,Apple USB-C Charge Cable 2m,Apple,Electronics,2900,220,0.63,35.5,5.1,4.6,2450,Yes
+P1263,Samsung Galaxy SmartTag Plus,Samsung,Electronics,3999,170,0.61,27,4.2,4.5,1760,Yes
+P1264,boAt Wave Genesis Smartwatch,boAt,Electronics,2999,200,0.7,34.3,5.3,4.2,4200,Yes
+P1265,Sony SRS-XE300 Speaker,Sony,Electronics,16990,95,0.56,18.2,3.6,4.6,960,Yes
+P1266,Logitech M720 Triathlon Mouse,Logitech,Electronics,5495,140,0.6,24.6,4,4.6,1240,Yes
+P1267,Dell XPS 15 Laptop,Dell,Electronics,189999,22,0.45,5.4,1.8,4.7,620,Yes
+P1268,HP Spectre Fold Laptop,HP,Electronics,499999,6,0.33,0.8,0.4,4.8,120,No
+P1269,Lenovo Tab Extreme,Lenovo,Electronics,89999,40,0.5,9.5,2.5,4.6,520,Yes
+P1270,Canon EOS R3 Camera,Canon,Electronics,499999,8,0.34,1.2,0.5,4.9,160,No
+P1271,Nike Training Resistance Bands,Nike,Fashion,1495,260,0.73,41,5.8,4.4,1820,Yes
+P1272,Adidas Yoga Training Block,Adidas,Fashion,999,280,0.74,45.3,6.2,4.3,1650,Yes
+P1273,Puma Foam Roller Recovery,Puma,Fashion,1799,240,0.72,38.5,5.6,4.2,1520,Yes
+P1274,Apple Thunderbolt 4 Pro Cable,Apple,Electronics,13900,120,0.58,22.1,3.8,4.6,980,Yes
+P1275,Samsung 27 Smart Monitor M5,Samsung,Electronics,24999,80,0.55,16.7,3.3,4.5,880,Yes
+P1276,boAt Immortal 401 Gaming Keyboard,boAt,Electronics,2999,190,0.68,30.4,4.9,4.2,3120,Yes
+P1277,Sony WH-CH520 Headphones,Sony,Electronics,5990,160,0.61,26.8,4.3,4.5,1320,Yes
+P1278,Logitech ERGO K860 Keyboard,Logitech,Electronics,14995,85,0.57,17.9,3.6,4.7,760,Yes
+P1279,Dell Pro Webcam WB5023,Dell,Electronics,10999,120,0.59,22.4,4,4.5,540,Yes
+P1280,HP Thunderbolt Dock G4,HP,Electronics,26999,60,0.53,12.8,2.9,4.6,410,Yes
+P1281,Lenovo Smart Paper Tablet,Lenovo,Electronics,45999,50,0.52,11.4,2.7,4.5,380,Yes
+P1282,Canon RF 28mm f2.8 Lens,Canon,Electronics,37999,65,0.54,14.2,3.2,4.7,620,Yes
+P1283,Nike Therma Fit Hoodie,Nike,Fashion,4995,190,0.7,31.3,4.8,4.5,1560,Yes
+P1284,Adidas Essentials Winter Jacket,Adidas,Fashion,7999,140,0.66,23.7,4,4.5,1320,Yes
+P1285,Puma Training Sweatshirt,Puma,Fashion,3999,170,0.68,27.9,4.4,4.3,1210,Yes
+P1286,Apple HomePod 2nd Gen,Apple,Electronics,32900,70,0.54,15.8,3.4,4.7,880,Yes
+P1287,Samsung Galaxy Buds3 Pro,Samsung,Electronics,19999,120,0.58,22.7,3.9,4.7,960,Yes
+P1288,boAt Stone Lumos Speaker,boAt,Electronics,4499,150,0.64,24.1,4.1,4.3,2100,Yes
+P1289,Sony ULT Tower 10 Party Speaker,Sony,Electronics,69990,40,0.5,9.7,2.4,4.6,540,Yes
+P1290,Logitech G Pro X Superlight 2,Logitech,Electronics,16995,100,0.57,18.9,3.6,4.8,720,Yes
+P1291,Dell UltraSharp 40 Curved Monitor,Dell,Electronics,179999,18,0.43,4,1.5,4.7,260,No
+P1292,HP Envy 17 Laptop,HP,Electronics,139999,30,0.46,6.5,1.9,4.6,480,Yes
+P1293,Lenovo ThinkPad Z13 Laptop,Lenovo,Electronics,159999,24,0.45,5.6,1.8,4.6,420,Yes
+P1294,Canon EOS R50 Vlogging Kit,Canon,Electronics,89999,38,0.5,8.8,2.4,4.7,640,Yes
+P1295,Nike Sportswear Windrunner Jacket,Nike,Fashion,6995,160,0.68,26.2,4.3,4.5,1520,Yes
+P1296,Adidas 4ATHLTS Duffel Bag,Adidas,Fashion,3499,190,0.69,30.1,4.6,4.5,1410,Yes
+P1297,Puma Training Yoga Mat,Puma,Fashion,2199,220,0.71,34.8,5,4.3,1380,Yes
+P1298,Apple AirPods Lite,Apple,Electronics,14999,140,0.6,24.7,4.2,4.6,840,Yes
+P1299,Samsung Galaxy A56,Samsung,Electronics,39999,120,0.62,26.1,4.4,4.5,720,Yes
+P1300,Sony Alpha ZV-E1 Camera,Sony,Electronics,199999,18,0.44,4.6,1.6,4.8,310,Yes
+P1301,Atomic Habits Paperback Book,Generic,Books,499,300,0.72,41.5,5.8,4.8,25000,Yes
+P1302,The Psychology of Money Book,Generic,Books,399,280,0.71,38.2,5.5,4.7,21000,Yes
+P1303,Ikigai Japanese Philosophy Book,Generic,Books,350,260,0.69,35.7,5.2,4.7,19800,Yes
+P1304,Rich Dad Poor Dad Finance Book,Generic,Books,450,240,0.68,33.6,5,4.7,22300,Yes
+P1305,Deep Work Productivity Book,Generic,Books,520,210,0.66,29.1,4.6,4.6,15400,Yes
+P1306,Think and Grow Rich Book,Generic,Books,299,320,0.73,45.8,6.1,4.6,21050,Yes
+P1307,The Alchemist Novel,Generic,Books,399,300,0.74,47.2,6.2,4.8,26000,Yes
+P1308,Harry Potter and the Sorcerers Stone,Generic,Books,599,210,0.67,30.4,4.7,4.9,31000,Yes
+P1309,Harry Potter Chamber of Secrets Book,Generic,Books,599,200,0.66,28.9,4.6,4.9,28500,Yes
+P1310,The Subtle Art of Not Giving a F Book,Generic,Books,450,240,0.69,32.7,4.9,4.6,19900,Yes
+P1311,Pigeon Stainless Steel Pressure Cooker,Pigeon,Home & Kitchen,2499,160,0.63,24.5,4.1,4.4,7200,Yes
+P1312,Hawkins Classic 3L Pressure Cooker,Hawkins,Home & Kitchen,3199,150,0.64,23.7,4,4.5,8300,Yes
+P1313,Prestige Non Stick Cookware Set,Prestige,Home & Kitchen,4999,140,0.61,20.1,3.7,4.4,5100,Yes
+P1314,Borosil Glass Mixing Bowl Set,Borosil,Home & Kitchen,1299,200,0.67,31.4,4.5,4.5,4200,Yes
+P1315,Milton Thermosteel Water Bottle,Milton,Home & Kitchen,899,220,0.7,36.6,4.9,4.6,6500,Yes
+P1316,Cello Plastic Storage Container Set,Cello,Home & Kitchen,999,210,0.69,34.9,4.8,4.4,5200,Yes
+P1317,IKEA Style Wooden Cutting Board,Generic,Home & Kitchen,799,230,0.71,38.4,5.2,4.5,4800,Yes
+P1318,Home Centre Cotton Bedsheet Set,Home Centre,Home & Kitchen,1999,170,0.65,26.3,4.1,4.5,3900,Yes
+P1319,Amazon Basics Memory Foam Pillow,Amazon Basics,Home & Kitchen,1299,190,0.68,30.8,4.4,4.4,4200,Yes
+P1320,Philips LED Desk Lamp,Philips,Home & Kitchen,1599,180,0.67,29.5,4.3,4.5,3100,Yes
+P1321,Levis Mens Slim Fit Jeans,Levis,Fashion,2999,200,0.71,35.7,5.1,4.5,8200,Yes
+P1322,Nike Everyday Cotton T Shirt,Nike,Fashion,1995,230,0.72,38.4,5.3,4.6,9100,Yes
+P1323,Adidas Training Track Pants,Adidas,Fashion,2999,190,0.69,32.1,4.8,4.5,7400,Yes
+P1324,Puma Running Sports Shorts,Puma,Fashion,1799,210,0.7,34.8,5,4.4,6200,Yes
+P1325,Van Heusen Formal Shirt,Van Heusen,Fashion,2499,180,0.67,29.4,4.4,4.5,5300,Yes
+P1326,Allen Solly Casual Shirt,Allen Solly,Fashion,2299,175,0.66,27.8,4.3,4.4,4800,Yes
+P1327,Levis Denim Jacket,Levis,Fashion,4999,140,0.63,21.5,3.7,4.5,3200,Yes
+P1328,Nike Dri Fit Sports Cap,Nike,Fashion,1495,210,0.71,34.1,5,4.4,4100,Yes
+P1329,Adidas Sports Socks Pack,Adidas,Fashion,999,240,0.73,39.6,5.6,4.4,4600,Yes
+P1330,Puma Training Gym Gloves,Puma,Fashion,1499,200,0.7,33.8,4.9,4.3,3900,Yes
+P1331,Lakme 9to5 Primer Foundation,Lakme,Beauty,699,260,0.72,41.9,5.9,4.5,8800,Yes
+P1332,Maybelline Fit Me Foundation,Maybelline,Beauty,599,270,0.73,43.1,6,4.6,10400,Yes
+P1333,Loreal Paris Revitalift Serum,Loreal,Beauty,999,210,0.68,31.5,4.6,4.6,7200,Yes
+P1334,Neutrogena Hydro Boost Moisturizer,Neutrogena,Beauty,899,220,0.69,33.2,4.8,4.6,8100,Yes
+P1335,Nivea Soft Light Moisturizer,Nivea,Beauty,399,300,0.74,46.4,6.2,4.6,13200,Yes
+P1336,Garnier Vitamin C Face Wash,Garnier,Beauty,299,310,0.75,48.9,6.4,4.5,12100,Yes
+P1337,Minimalist Niacinamide Serum,Minimalist,Beauty,599,250,0.71,38.7,5.5,4.6,6200,Yes
+P1338,Himalaya Neem Face Wash,Himalaya,Beauty,250,320,0.76,50.5,6.7,4.5,15000,Yes
+P1339,Dove Deep Moisture Body Wash,Dove,Beauty,399,280,0.73,44.2,6.1,4.6,9200,Yes
+P1340,TRESemme Keratin Smooth Shampoo,TRESemme,Beauty,499,260,0.72,41,5.8,4.5,8300,Yes
+P1341,Tata Sampann Toor Dal 1kg,Tata Sampann,Grocery,220,340,0.75,52.1,6.5,4.6,15000,Yes
+P1342,Aashirvaad Whole Wheat Atta 5kg,Aashirvaad,Grocery,325,320,0.74,49.8,6.3,4.6,16200,Yes
+P1343,Fortune Sunflower Oil 1L,Fortune,Grocery,180,330,0.74,50.2,6.4,4.5,17000,Yes
+P1344,India Gate Basmati Rice 5kg,India Gate,Grocery,850,210,0.69,34.1,5.2,4.6,9200,Yes
+P1345,Maggi 2 Minute Noodles Pack,Nestle,Grocery,168,380,0.77,60.5,7.1,4.7,21000,Yes
+P1346,Kelloggs Cornflakes Original,Kelloggs,Grocery,420,260,0.72,41.7,5.8,4.6,9800,Yes
+P1347,Amul Pure Ghee 1L,Amul,Grocery,720,220,0.68,30.9,4.6,4.7,8700,Yes
+P1348,Bru Instant Coffee 200g,Bru,Grocery,350,250,0.71,38.5,5.4,4.6,7600,Yes
+P1349,Tata Tea Gold 1kg,Tata,Grocery,540,230,0.7,36.4,5.2,4.6,8400,Yes
+P1350,Cadbury Dairy Milk Chocolate Pack,Cadbury,Grocery,299,300,0.75,49.2,6.5,4.8,21000,Yes
+P1351,Decathlon Yoga Mat 6mm,Decathlon,Sports,999,220,0.71,36.3,5.2,4.5,5400,Yes
+P1352,Decathlon Adjustable Dumbbells Set,Decathlon,Sports,3499,140,0.64,22.5,3.8,4.6,4200,Yes
+P1353,Cosco Football Size 5,Cosco,Sports,899,210,0.69,32.8,4.6,4.4,3600,Yes
+P1354,Spalding Basketball Size 7,Spalding,Sports,1499,180,0.67,29.7,4.3,4.5,3100,Yes
+P1355,Yonex Mavis 350 Shuttlecock,Yonex,Sports,999,200,0.7,34.6,4.9,4.6,4200,Yes
+P1356,Nivia Storm Football,Nivia,Sports,799,230,0.71,36.8,5.1,4.4,3500,Yes
+P1357,Decathlon Skipping Rope Fitness,Decathlon,Sports,399,280,0.74,44.3,6,4.5,4600,Yes
+P1358,Head Tennis Racket Beginner,Head,Sports,2499,150,0.63,21.4,3.7,4.5,2100,Yes
+P1359,Nike Training Resistance Bands,Nike,Sports,1495,190,0.68,30.7,4.4,4.5,2500,Yes
+P1360,Adidas Yoga Block Foam,Adidas,Sports,699,240,0.73,40.6,5.7,4.4,3100,Yes
+P1361,Generic Ceramic Coffee Mug Set,Generic,Home & Kitchen,599,260,0.71,37.2,5.2,4.4,3200,Yes
+P1362,Generic Wooden Serving Tray,Generic,Home & Kitchen,899,210,0.69,32.4,4.8,4.5,2900,Yes
+P1363,Generic Stainless Steel Knife Set,Generic,Home & Kitchen,1299,190,0.66,28.5,4.4,4.5,2500,Yes
+P1364,Generic Cotton Kitchen Towels Pack,Generic,Home & Kitchen,499,270,0.73,41.7,5.8,4.4,3100,Yes
+P1365,Generic Nonstick Frying Pan 28cm,Generic,Home & Kitchen,999,220,0.7,35.6,5,4.4,2900,Yes
+P1366,Generic Electric Kettle 1.5L,Generic,Home & Kitchen,1399,200,0.67,30.3,4.5,4.4,2700,Yes
+P1367,Generic Cotton Bath Towel,Generic,Home & Kitchen,699,240,0.72,38.8,5.5,4.4,3000,Yes
+P1368,Generic Glass Water Jug 1.5L,Generic,Home & Kitchen,599,230,0.71,36.4,5.2,4.3,2800,Yes
+P1369,Generic Plastic Laundry Basket,Generic,Home & Kitchen,499,250,0.73,40.9,5.9,4.3,3100,Yes
+P1370,Generic Wall Clock Modern Design,Generic,Home & Kitchen,799,210,0.69,32.7,4.7,4.4,2900,Yes
+P1371,Generic Organic Honey 500g,Generic,Grocery,450,260,0.72,41.5,5.8,4.6,4200,Yes
+P1372,Generic Peanut Butter Crunchy 1kg,Generic,Grocery,399,280,0.74,45.8,6.2,4.6,4600,Yes
+P1373,Generic Oats Rolled 1kg,Generic,Grocery,299,300,0.75,48.4,6.5,4.6,5200,Yes
+P1374,Generic Almonds Premium 500g,Generic,Grocery,650,220,0.69,33.7,5,4.7,4100,Yes
+P1375,Generic Cashew Nuts 500g,Generic,Grocery,720,210,0.68,32.5,4.8,4.7,3900,Yes
+P1376,Generic Green Tea Bags Pack,Generic,Grocery,299,270,0.73,42.3,5.9,4.6,4300,Yes
+P1377,Generic Granola Honey Oats 500g,Generic,Grocery,349,260,0.72,40.6,5.7,4.5,4100,Yes
+P1378,Generic Dark Chocolate 70 Percent,Generic,Grocery,199,310,0.76,51.2,6.8,4.6,6200,Yes
+P1379,Generic Protein Bar Pack,Generic,Grocery,499,250,0.71,38.1,5.4,4.5,3900,Yes
+P1380,Generic Instant Soup Mix Pack,Generic,Grocery,199,320,0.77,53.6,7,4.4,4800,Yes
+P1381,Generic Yoga Strap Stretch Band,Generic,Sports,499,230,0.72,38.2,5.4,4.4,2800,Yes
+P1382,Generic Push Up Bars Fitness,Generic,Sports,899,210,0.69,33.1,4.8,4.5,2600,Yes
+P1383,Generic Kettlebell 8kg,Generic,Sports,1499,180,0.66,28.6,4.3,4.5,2300,Yes
+P1384,Generic Gym Water Bottle 1L,Generic,Sports,399,260,0.74,44.9,6,4.4,3100,Yes
+P1385,Generic Running Waist Belt,Generic,Sports,599,240,0.71,37.3,5.3,4.4,2900,Yes
+P1386,Generic Adjustable Hand Grip,Generic,Sports,299,300,0.76,50.7,6.7,4.5,3600,Yes
+P1387,Generic Foam Roller Massage,Generic,Sports,899,210,0.69,33.4,4.8,4.4,2600,Yes
+P1388,Generic Resistance Loop Bands Set,Generic,Sports,499,250,0.72,39.1,5.6,4.4,3000,Yes
+P1389,Generic Running Arm Phone Holder,Generic,Sports,399,270,0.73,41.8,5.8,4.3,2900,Yes
+P1390,Generic Training Cones Set,Generic,Sports,699,220,0.7,36.2,5,4.3,2400,Yes
+P1391,Generic Cotton T Shirt Pack,Generic,Fashion,799,260,0.72,40.4,5.7,4.3,3200,Yes
+P1392,Generic Casual Hoodie Sweatshirt,Generic,Fashion,1499,200,0.68,31.1,4.6,4.4,2800,Yes
+P1393,Generic Slim Fit Chinos Pants,Generic,Fashion,1799,210,0.69,32.5,4.7,4.4,2600,Yes
+P1394,Generic Sports Jogger Pants,Generic,Fashion,1599,220,0.7,34.1,4.9,4.3,2500,Yes
+P1395,Generic Casual Denim Jeans,Generic,Fashion,1999,190,0.67,29.4,4.4,4.4,2400,Yes
+P1396,Generic Leather Belt Mens,Generic,Fashion,899,230,0.71,36.7,5.1,4.3,2700,Yes
+P1397,Generic Sunglasses UV Protection,Generic,Fashion,799,240,0.72,38.5,5.3,4.3,2600,Yes
+P1398,Generic Canvas Backpack Casual,Generic,Fashion,1499,210,0.69,32.9,4.8,4.3,2500,Yes
+P1399,Generic Winter Beanie Cap,Generic,Fashion,499,260,0.73,41.6,5.8,4.3,2800,Yes
+P1400,Generic Cotton Scarf Unisex,Generic,Fashion,599,250,0.72,39.7,5.6,4.3,2700,Yes
+P1401,The 7 Habits of Highly Effective People Book,Generic,Books,499,280,0.71,39.5,5.6,4.7,19000,Yes
+P1402,Start With Why Leadership Book,Generic,Books,450,260,0.7,36.8,5.3,4.6,14500,Yes
+P1403,Zero to One Startup Book,Generic,Books,520,240,0.69,34.2,5.1,4.6,13200,Yes
+P1404,Good to Great Business Book,Generic,Books,550,220,0.67,30.5,4.7,4.7,12800,Yes
+P1405,Atomic Habits Workbook Edition,Generic,Books,599,210,0.66,29.7,4.6,4.8,12000,Yes
+P1406,Think Like a Monk Self Help Book,Generic,Books,399,290,0.72,41.4,5.8,4.6,17000,Yes
+P1407,The Power of Now Spiritual Book,Generic,Books,450,270,0.71,38.6,5.5,4.7,15800,Yes
+P1408,The Lean Startup Book,Generic,Books,520,230,0.68,33.3,4.9,4.6,12100,Yes
+P1409,Steve Jobs Biography Book,Generic,Books,650,200,0.65,27.8,4.4,4.8,16200,Yes
+P1410,Sapiens History of Humankind Book,Generic,Books,699,190,0.64,25.9,4.2,4.8,18400,Yes
+P1411,Prestige Induction Base Fry Pan,Prestige,Home & Kitchen,1299,210,0.69,33.5,4.8,4.5,3100,Yes
+P1412,Hawkins Stainless Steel Saucepan,Hawkins,Home & Kitchen,1499,200,0.68,31.7,4.6,4.5,2900,Yes
+P1413,Pigeon Nonstick Tawa,Pigeon,Home & Kitchen,999,230,0.7,35.4,5,4.4,3300,Yes
+P1414,Milton Insulated Lunch Box,Milton,Home & Kitchen,799,240,0.71,37.8,5.3,4.5,4100,Yes
+P1415,Cello Stainless Steel Water Bottle,Cello,Home & Kitchen,699,250,0.72,39.6,5.5,4.4,3800,Yes
+P1416,Borosil Glass Storage Jar Set,Borosil,Home & Kitchen,1299,210,0.69,34.1,4.9,4.5,2600,Yes
+P1417,Home Centre Wooden Photo Frame,Home Centre,Home & Kitchen,899,220,0.7,35.8,5.1,4.4,2400,Yes
+P1418,Amazon Basics Cotton Bedsheet Double,Amazon Basics,Home & Kitchen,1599,200,0.67,30.9,4.6,4.5,2700,Yes
+P1419,IKEA Style Desk Organizer,Generic,Home & Kitchen,599,260,0.72,40.1,5.6,4.4,3000,Yes
+P1420,Generic Bamboo Laundry Hamper,Generic,Home & Kitchen,1199,210,0.69,33.2,4.8,4.4,2100,Yes
+P1421,Nike Sportswear Club Hoodie,Nike,Fashion,3995,180,0.67,29.6,4.4,4.6,5200,Yes
+P1422,Adidas Essentials Logo T Shirt,Adidas,Fashion,1799,220,0.7,34.9,5,4.5,6100,Yes
+P1423,Puma Active Training Tank,Puma,Fashion,1599,230,0.71,36.2,5.1,4.4,4800,Yes
+P1424,Levis 511 Slim Fit Jeans,Levis,Fashion,3499,170,0.66,27.4,4.2,4.6,5300,Yes
+P1425,Van Heusen Formal Trousers,Van Heusen,Fashion,2999,180,0.67,29.1,4.4,4.5,4200,Yes
+P1426,Allen Solly Polo T Shirt,Allen Solly,Fashion,1999,210,0.69,32.5,4.7,4.5,4600,Yes
+P1427,Nike Everyday Cushioned Socks,Nike,Fashion,999,250,0.72,38.9,5.4,4.4,4100,Yes
+P1428,Adidas Training Duffel Bag Medium,Adidas,Fashion,2499,200,0.68,31.6,4.6,4.5,3500,Yes
+P1429,Puma Classic Backpack,Puma,Fashion,1999,210,0.69,33.7,4.8,4.4,3300,Yes
+P1430,Levis Leather Wallet Mens,Levis,Fashion,1499,220,0.7,35.4,5,4.5,3700,Yes
+P1431,Lakme Absolute Matte Lipstick,Lakme,Beauty,799,260,0.72,41.2,5.8,4.5,6200,Yes
+P1432,Maybelline Colossal Kajal,Maybelline,Beauty,299,310,0.75,48.5,6.4,4.6,10500,Yes
+P1433,Loreal Paris Total Repair Shampoo,Loreal,Beauty,499,270,0.72,43.3,6,4.5,7800,Yes
+P1434,Neutrogena Sunscreen SPF50,Neutrogena,Beauty,699,250,0.71,40.7,5.7,4.6,7200,Yes
+P1435,Nivea Men Face Wash,Nivea,Beauty,249,320,0.76,51.8,6.8,4.5,11200,Yes
+P1436,Garnier Micellar Cleansing Water,Garnier,Beauty,399,280,0.73,45.6,6.2,4.5,6900,Yes
+P1437,Minimalist Vitamin C Serum,Minimalist,Beauty,699,240,0.69,34.5,4.9,4.6,5800,Yes
+P1438,Himalaya Aloe Vera Gel,Himalaya,Beauty,199,340,0.77,54.3,7,4.5,12000,Yes
+P1439,Dove Beauty Cream Bar Soap Pack,Dove,Beauty,299,300,0.74,47.7,6.5,4.6,9100,Yes
+P1440,TRESemme Hair Fall Defense Conditioner,TRESemme,Beauty,499,260,0.72,41.6,5.8,4.5,6700,Yes
+P1441,Aashirvaad Multigrain Atta 5kg,Aashirvaad,Grocery,350,310,0.74,49.5,6.3,4.6,14200,Yes
+P1442,Tata Sampann Chana Dal 1kg,Tata Sampann,Grocery,180,330,0.75,52.8,6.6,4.6,13600,Yes
+P1443,Fortune Rice Bran Oil 1L,Fortune,Grocery,210,300,0.73,47.1,6.2,4.5,12800,Yes
+P1444,India Gate Classic Basmati Rice 5kg,India Gate,Grocery,899,210,0.69,33.4,5,4.6,8900,Yes
+P1445,Nestle Everyday Dairy Whitener,Nestle,Grocery,399,270,0.72,42.6,5.9,4.6,7200,Yes
+P1446,Kelloggs Muesli Fruit Nut Pack,Kelloggs,Grocery,499,250,0.71,39.8,5.6,4.6,6400,Yes
+P1447,Amul Butter 500g Pack,Amul,Grocery,275,320,0.75,50.7,6.7,4.8,15000,Yes
+P1448,Bru Gold Instant Coffee,Bru,Grocery,420,260,0.72,41.5,5.8,4.6,6800,Yes
+P1449,Tata Tea Premium 1kg,Tata,Grocery,499,240,0.7,36.9,5.3,4.6,7100,Yes
+P1450,Cadbury Bournville Dark Chocolate,Cadbury,Grocery,199,320,0.76,52.2,6.9,4.7,9900,Yes
+P1451,Decathlon Foam Roller Recovery,Decathlon,Sports,899,220,0.7,36.3,5.1,4.5,2600,Yes
+P1452,Decathlon Yoga Block Cork,Decathlon,Sports,799,230,0.71,38.4,5.3,4.5,2700,Yes
+P1453,Cosco Cricket Tennis Ball Pack,Cosco,Sports,499,260,0.72,40.5,5.6,4.4,3200,Yes
+P1454,Spalding Street Basketball,Spalding,Sports,1499,180,0.66,28.7,4.3,4.5,2100,Yes
+P1455,Yonex Badminton Grip Pack,Yonex,Sports,399,280,0.74,45.2,6,4.5,3400,Yes
+P1456,Nivia Rubber Volleyball,Nivia,Sports,699,240,0.71,37.6,5.2,4.4,2500,Yes
+P1457,Decathlon Gym Resistance Tube,Decathlon,Sports,499,260,0.73,41.9,5.7,4.4,2900,Yes
+P1458,Head Tennis Balls Pack of 3,Head,Sports,399,280,0.74,44.3,5.9,4.5,3100,Yes
+P1459,Nike Training Water Bottle,Nike,Sports,799,230,0.7,36.8,5.1,4.4,2800,Yes
+P1460,Adidas Skipping Rope Adjustable,Adidas,Sports,699,240,0.71,38.9,5.4,4.4,2700,Yes
+P1461,Generic Ceramic Dinner Plate Set,Generic,Home & Kitchen,1299,210,0.69,33.6,4.8,4.4,2400,Yes
+P1462,Generic Stainless Steel Spoon Set,Generic,Home & Kitchen,499,260,0.72,39.7,5.5,4.3,2800,Yes
+P1463,Generic Plastic Food Storage Boxes,Generic,Home & Kitchen,699,240,0.71,37.5,5.2,4.3,2600,Yes
+P1464,Generic Electric Rice Cooker 1.8L,Generic,Home & Kitchen,2499,170,0.65,27.2,4.1,4.4,2100,Yes
+P1465,Generic Wooden Spice Rack,Generic,Home & Kitchen,999,220,0.7,35.1,5,4.4,2300,Yes
+P1466,Generic Cotton Pillow Cover Set,Generic,Home & Kitchen,599,250,0.72,39.4,5.4,4.3,2600,Yes
+P1467,Generic Wall Mounted Shelf,Generic,Home & Kitchen,1299,210,0.69,34.2,4.9,4.3,2200,Yes
+P1468,Generic Kitchen Apron Cotton,Generic,Home & Kitchen,399,280,0.74,45.3,6,4.3,2700,Yes
+P1469,Generic Table Runner Cotton,Generic,Home & Kitchen,499,260,0.72,40.8,5.6,4.3,2500,Yes
+P1470,Generic LED String Lights Decor,Generic,Home & Kitchen,699,240,0.71,37.9,5.3,4.3,2600,Yes
+P1471,Generic Organic Brown Sugar 1kg,Generic,Grocery,199,330,0.76,52.6,6.9,4.5,3800,Yes
+P1472,Generic Whole Wheat Pasta Pack,Generic,Grocery,149,350,0.77,55.1,7.1,4.4,4200,Yes
+P1473,Generic Quinoa Seeds 500g,Generic,Grocery,399,260,0.72,41.8,5.8,4.6,3500,Yes
+P1474,Generic Chia Seeds 250g,Generic,Grocery,299,280,0.73,44.2,6,4.6,3900,Yes
+P1475,Generic Protein Oats 1kg,Generic,Grocery,349,270,0.72,42.4,5.9,4.5,3700,Yes
+P1476,Generic Almond Milk 1L,Generic,Grocery,299,290,0.73,45.9,6.2,4.5,3600,Yes
+P1477,Generic Coconut Oil Cold Pressed,Generic,Grocery,399,270,0.72,42.3,5.8,4.6,3800,Yes
+P1478,Generic Herbal Green Tea Pack,Generic,Grocery,249,310,0.75,49.7,6.6,4.5,4200,Yes
+P1479,Generic Mixed Dry Fruits Pack,Generic,Grocery,699,220,0.68,31.9,4.7,4.7,3400,Yes
+P1480,Generic Energy Granola Bars Pack,Generic,Grocery,399,260,0.72,41.1,5.7,4.5,3500,Yes
+P1481,Generic Adjustable Dumbbell 5kg,Generic,Sports,1499,180,0.66,28.5,4.3,4.4,2100,Yes
+P1482,Generic Foam Exercise Mat,Generic,Sports,999,220,0.7,35.7,5,4.4,2300,Yes
+P1483,Generic Pull Up Resistance Band,Generic,Sports,799,240,0.71,37.8,5.2,4.4,2400,Yes
+P1484,Generic Training Agility Ladder,Generic,Sports,699,250,0.72,39.3,5.4,4.4,2200,Yes
+P1485,Generic Kettlebell 10kg,Generic,Sports,1799,170,0.65,27.1,4.1,4.5,2000,Yes
+P1486,Generic Gym Wrist Wraps,Generic,Sports,499,260,0.72,41.2,5.7,4.4,2300,Yes
+P1487,Generic Running Reflective Vest,Generic,Sports,699,240,0.71,38.6,5.3,4.4,2100,Yes
+P1488,Generic Yoga Balance Disc,Generic,Sports,899,210,0.69,33.7,4.8,4.4,2000,Yes
+P1489,Generic Fitness Step Platform,Generic,Sports,1299,190,0.67,29.6,4.4,4.4,1900,Yes
+P1490,Generic Jump Rope Steel Cable,Generic,Sports,499,260,0.72,41.7,5.8,4.4,2400,Yes
+P1491,Generic Cotton Casual Shirt,Generic,Fashion,1499,210,0.69,33.4,4.8,4.3,2300,Yes
+P1492,Generic Slim Fit Hoodie,Generic,Fashion,1799,200,0.68,31.6,4.6,4.3,2200,Yes
+P1493,Generic Casual Joggers Pants,Generic,Fashion,1599,210,0.69,34.1,4.9,4.3,2100,Yes
+P1494,Generic Denim Jacket Classic,Generic,Fashion,2499,180,0.66,28.4,4.3,4.4,2000,Yes
+P1495,Generic Sports Running Shorts,Generic,Fashion,999,240,0.72,39.6,5.5,4.3,2300,Yes
+P1496,Generic Leather Wallet Bifold,Generic,Fashion,899,250,0.72,40.5,5.6,4.3,2400,Yes
+P1497,Generic Canvas Travel Backpack,Generic,Fashion,1999,200,0.68,31.8,4.6,4.3,2200,Yes
+P1498,Generic Polarized Sunglasses,Generic,Fashion,799,260,0.72,41.2,5.7,4.3,2300,Yes
+P1499,Generic Cotton Baseball Cap,Generic,Fashion,499,280,0.74,45.6,6.1,4.3,2500,Yes
+P1500,Generic Winter Gloves Knit,Generic,Fashion,599,270,0.73,43.8,5.9,4.3,2400,Yes
