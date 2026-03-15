@@ -9,12 +9,12 @@ import os
 import warnings
 warnings.filterwarnings('ignore')
 
-# ─────────────────────────────────────────────
+# 
 # Page Configuration
-# ─────────────────────────────────────────────
+# 
 st.set_page_config(
     page_title="Smart E-Commerce Analytics",
-    page_icon="🛒",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -33,9 +33,9 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# ─────────────────────────────────────────────
+# 
 # Data Loading
-# ─────────────────────────────────────────────
+# 
 @st.cache_data
 def load_data():
     customers    = pd.read_csv('data/Customers.csv')
@@ -67,9 +67,9 @@ def load_models():
 customers, products, transactions = load_data()
 models = load_models()
 
-# ─────────────────────────────────────────────
+# 
 # Helpers
-# ─────────────────────────────────────────────
+# 
 def fmt_inr(value):
     if value >= 1e7:
         return f"₹{value/1e7:.2f}Cr"
@@ -93,30 +93,30 @@ def rfm_segment(score):
     elif score >= 5:  return 'At Risk'
     return 'Lost'
 
-# ─────────────────────────────────────────────
+# 
 # Sidebar
-# ─────────────────────────────────────────────
+# 
 st.sidebar.image("https://img.icons8.com/fluency/96/000000/shopping-cart.png", width=60)
-st.sidebar.title("🛒 E-Commerce Analytics")
+st.sidebar.title(" E-Commerce Analytics")
 st.sidebar.markdown("---")
 
 page = st.sidebar.radio("Navigate to", [
-    "📊 Overview Dashboard",
-    "🎯 Customer Segmentation",
-    "⚠️ Churn Prediction",
-    "📈 Sales Forecasting",
-    "💡 Product Recommendations",
+    " Overview Dashboard",
+    " Customer Segmentation",
+    " Churn Prediction",
+    " Sales Forecasting",
+    " Product Recommendations",
 ])
 
 st.sidebar.markdown("---")
 st.sidebar.caption("Smart E-Commerce Capstone Project")
-st.sidebar.caption(f"👥 {len(customers):,} customers  |  🛍️ {len(transactions):,} transactions")
+st.sidebar.caption(f" {len(customers):,} customers  |   {len(transactions):,} transactions")
 
-# ═══════════════════════════════════════════════════════════
+# 
 # PAGE 1 — Overview Dashboard
-# ═══════════════════════════════════════════════════════════
-if page == "📊 Overview Dashboard":
-    st.title("📊 Smart E-Commerce Analytics — Overview")
+# 
+if page == " Overview Dashboard":
+    st.title(" Smart E-Commerce Analytics — Overview")
     st.markdown("**Business Intelligence Dashboard** | Insights from customer & transaction data")
     st.markdown("---")
 
@@ -129,12 +129,12 @@ if page == "📊 Overview Dashboard":
     total_orders  = len(transactions)
 
     c1,c2,c3,c4,c5,c6 = st.columns(6)
-    c1.metric("💰 Total Revenue",  fmt_inr(total_revenue))
-    c2.metric("🛍️ Total Orders",   f"{total_orders:,}")
-    c3.metric("📦 Avg Order Value", fmt_inr(avg_order))
-    c4.metric("⚠️ Churn Rate",     f"{churn_rate:.1f}%")
-    c5.metric("⭐ Prime Members",  f"{prime_pct:.0f}%")
-    c6.metric("😊 Avg NPS",        f"{avg_nps:.1f}")
+    c1.metric("Total Revenue",   f"₹{total_revenue/1e7:.1f} Cr")
+    c2.metric(" Total Orders",   f"{total_orders:,}")
+    c3.metric(" Avg Order Value", fmt_inr(avg_order))
+    c4.metric(" Churn Rate",     f"{churn_rate:.1f}%")
+    c5.metric(" Prime Members",  f"{prime_pct:.0f}%")
+    c6.metric(" Avg NPS",        f"{avg_nps:.1f}")
     st.markdown("---")
 
     # Monthly Revenue Trend
@@ -204,11 +204,11 @@ if page == "📊 Overview Dashboard":
         plt.tight_layout(); st.pyplot(fig); plt.close()
 
 
-# ═══════════════════════════════════════════════════════════
+# 
 # PAGE 2 — Customer Segmentation
-# ═══════════════════════════════════════════════════════════
-elif page == "🎯 Customer Segmentation":
-    st.title("🎯 Customer Segmentation")
+# 
+elif page == " Customer Segmentation":
+    st.title(" Customer Segmentation")
     st.markdown("RFM Score Computation + K-Means Clustering")
     st.markdown("---")
 
@@ -217,11 +217,21 @@ elif page == "🎯 Customer Segmentation":
     rfm['RFM_Segment'] = rfm['RFM_Score'].apply(rfm_segment)
 
     seg_counts = rfm['RFM_Segment'].value_counts()
-    emoji_map = {'Champions':'🏆','Loyal Customers':'💛','Potential Loyalists':'💚','At Risk':'⚠️','Lost':'❌'}
+    emoji_map = {'Champions':'','Loyal Customers':'','Potential Loyalists':'','At Risk':'','Lost':''}
 
+    red_segs = {'Lost', 'At Risk'}
     cols = st.columns(len(seg_counts))
     for col, (seg, cnt) in zip(cols, seg_counts.items()):
-        col.metric(f"{emoji_map.get(seg,'')} {seg}", f"{cnt:,}", f"{cnt/len(rfm)*100:.1f}%")
+        pct = f"{cnt/len(rfm)*100:.1f}%"
+        if seg in red_segs:
+            col.markdown(f"""
+    <div style="padding:8px 0">
+        <div style="font-size:0.875rem;color:#555;">{seg}</div>
+        <div style="font-size:2rem;font-weight:700;color:#e74c3c;">{cnt:,}</div>
+        <div style="font-size:0.8rem;color:#e74c3c;">↑ {pct}</div>
+    </div>""", unsafe_allow_html=True)
+        else:
+            col.metric(seg, f"{cnt:,}", pct)
     st.markdown("---")
 
     cl, cr = st.columns(2)
@@ -271,14 +281,14 @@ elif page == "🎯 Customer Segmentation":
             ax.set_xlabel(xl); ax.set_ylabel('Monetary Value (₹)'); ax.set_title(t); ax.legend()
         plt.tight_layout(); st.pyplot(fig); plt.close()
     else:
-        st.info("ℹ️ Run **02_Segmentation.ipynb** to generate K-Means model files.")
+        st.info("ℹ Run **02_Segmentation.ipynb** to generate K-Means model files.")
 
 
-# ═══════════════════════════════════════════════════════════
+# 
 # PAGE 3 — Churn Prediction
-# ═══════════════════════════════════════════════════════════
-elif page == "⚠️ Churn Prediction":
-    st.title("⚠️ Churn Prediction")
+# 
+elif page == " Churn Prediction":
+    st.title(" Churn Prediction")
     st.markdown("Predict customer churn probability using Random Forest")
     st.markdown("---")
 
@@ -314,7 +324,7 @@ elif page == "⚠️ Churn Prediction":
         plt.tight_layout(); st.pyplot(fig); plt.close()
 
     st.markdown("---")
-    st.markdown("#### 🔍 Individual Customer Churn Risk Predictor")
+    st.markdown("####  Individual Customer Churn Risk Predictor")
 
     if all(k in models for k in ['random_forest','scaler_churn','label_encoders','churn_features']):
         ca, cb, cc = st.columns(3)
@@ -349,7 +359,7 @@ elif page == "⚠️ Churn Prediction":
         # Top category selector
         top_cat = st.selectbox("Top Category", ["Electronics","Fashion","Beauty","Books","Sports"])
 
-        if st.button("🔮 Predict Churn Risk", use_container_width=True):
+        if st.button(" Predict Churn Risk", use_container_width=True):
             try:
                 # Compute RFM scores consistently with training
                 r_score = int(np.clip(5 - round(recency / 146), 1, 5))
@@ -391,7 +401,7 @@ elif page == "⚠️ Churn Prediction":
 
                 st.markdown("---")
                 if prob >= 0.7:
-                    st.error(f"🔴 **HIGH CHURN RISK: {prob*100:.1f}%**")
+                    st.error(f" **HIGH CHURN RISK: {prob*100:.1f}%**")
                     st.markdown("**Action:** Immediate retention campaign — personalised discount + outreach")
                 elif prob >= 0.4:
                     st.warning(f"🟡 **MEDIUM CHURN RISK: {prob*100:.1f}%**")
@@ -415,18 +425,18 @@ elif page == "⚠️ Churn Prediction":
             except Exception as e:
                 st.error(f"Prediction error: {e}")
     else:
-        st.info("ℹ️ Run **03_Churn_Prediction.ipynb** to generate model files.")
+        st.info("ℹ Run **03_Churn_Prediction.ipynb** to generate model files.")
 
 
-# ═══════════════════════════════════════════════════════════
+# 
 # PAGE 4 — Sales Forecasting (Interactive)
-# ═══════════════════════════════════════════════════════════
-elif page == "📈 Sales Forecasting":
-    st.title("📈 Sales Forecasting")
+# 
+elif page == " Sales Forecasting":
+    st.title(" Sales Forecasting")
     st.markdown("LSTM Deep Learning model — Fully interactive forecast explorer")
     st.markdown("---")
 
-    # ── Build full monthly data (all categories) ──────────────────
+    #  Build full monthly data (all categories) 
     transactions['year'] = transactions['transaction_date'].dt.year
     transactions['month_dt'] = transactions['transaction_date'].dt.to_period('M').dt.to_timestamp()
 
@@ -436,12 +446,12 @@ elif page == "📈 Sales Forecasting":
     all_monthly.columns = ['month_dt','revenue']
     all_monthly = all_monthly.sort_values('month_dt').reset_index(drop=True)
 
-    # ── SIDEBAR-STYLE CONTROLS (in-page columns) ──────────────────
-    st.markdown("### ⚙️ Forecast Controls")
+    #  SIDEBAR-STYLE CONTROLS (in-page columns) 
+    st.markdown("###  Forecast Controls")
     ctrl1, ctrl2, ctrl3 = st.columns(3)
 
     with ctrl1:
-        st.markdown("**📅 Historical View**")
+        st.markdown("** Historical View**")
         all_years  = sorted(transactions['year'].unique())
         year_range = st.select_slider(
             "Year range to display",
@@ -455,7 +465,7 @@ elif page == "📈 Sales Forecasting":
         )
 
     with ctrl2:
-        st.markdown("**🔮 Forecast Settings**")
+        st.markdown("** Forecast Settings**")
         forecast_months = st.slider("Forecast horizon (months)", 1, 24, 6)
         growth_scenario = st.selectbox(
             "Growth scenario",
@@ -465,17 +475,17 @@ elif page == "📈 Sales Forecasting":
         confidence_band = st.slider("Confidence band width (%)", 0, 30, 10)
 
     with ctrl3:
-        st.markdown("**📦 Category Filter**")
+        st.markdown("** Category Filter**")
         categories = ["All"] + sorted(transactions['category'].unique().tolist())
         selected_category = st.selectbox("Filter by category", categories)
-        st.markdown("**📊 Chart Style**")
+        st.markdown("** Chart Style**")
         show_markers  = st.checkbox("Show data points", value=True)
         show_trend    = st.checkbox("Show trend line", value=False)
         show_yoy_ann  = st.checkbox("Annotate YoY growth", value=True)
 
     st.markdown("---")
 
-    # ── Filter data by category ───────────────────────────────────
+    #  Filter data by category 
     if selected_category == "All":
         filtered_txn = transactions
     else:
@@ -487,13 +497,13 @@ elif page == "📈 Sales Forecasting":
     monthly.columns = ['month_dt','revenue']
     monthly = monthly.sort_values('month_dt').reset_index(drop=True)
 
-    # ── Filter by year range ──────────────────────────────────────
+    #  Filter by year range 
     monthly = monthly[
         (monthly['month_dt'].dt.year >= year_range[0]) &
         (monthly['month_dt'].dt.year <= year_range[1])
     ].reset_index(drop=True)
 
-    # ── KPI row ───────────────────────────────────────────────────
+    #  KPI row 
     total_rev  = monthly['revenue'].sum()
     avg_rev    = monthly['revenue'].mean()
     peak_rev   = monthly['revenue'].max()
@@ -502,15 +512,15 @@ elif page == "📈 Sales Forecasting":
     mom_change = (monthly['revenue'].iloc[-1] / monthly['revenue'].iloc[-2] - 1) * 100 if len(monthly) > 1 else 0
 
     c1,c2,c3,c4,c5 = st.columns(5)
-    c1.metric("💰 Total Revenue",    fmt_inr(total_rev),
+    c1.metric(" Total Revenue",    fmt_inr(total_rev),
               f"{'All' if selected_category=='All' else selected_category}")
-    c2.metric("📊 Avg Monthly",      fmt_inr(avg_rev))
-    c3.metric("📈 Peak Month",       fmt_inr(peak_rev), peak_month)
-    c4.metric("🗓️ Latest Month",     fmt_inr(latest_rev), f"{mom_change:+.1f}% MoM")
-    c5.metric("📅 Months of Data",   f"{len(monthly)}")
+    c2.metric(" Avg Monthly",      fmt_inr(avg_rev))
+    c3.metric(" Peak Month",       fmt_inr(peak_rev), peak_month)
+    c4.metric(" Latest Month",     fmt_inr(latest_rev), f"{mom_change:+.1f}% MoM")
+    c5.metric(" Months of Data",   f"{len(monthly)}")
     st.markdown("---")
 
-    # ── Historical chart window filter ───────────────────────────
+    #  Historical chart window filter 
     window_map = {
         "All time": len(monthly),
         "Last 3 years": 36,
@@ -520,7 +530,7 @@ elif page == "📈 Sales Forecasting":
     display_n = min(window_map[hist_window], len(monthly))
     monthly_display = monthly.tail(display_n).reset_index(drop=True)
 
-    # ── Generate forecast ─────────────────────────────────────────
+    #  Generate forecast 
     scenario_mult = {
         "Baseline (LSTM)":    1.00,
         "Optimistic (+10%)":  1.10,
@@ -589,8 +599,8 @@ elif page == "📈 Sales Forecasting":
         'lower':            lower_band,
     })
 
-    # ── Main forecast chart ───────────────────────────────────────
-    st.markdown(f"#### 📊 Historical Revenue + {forecast_months}-Month Forecast  "
+    #  Main forecast chart 
+    st.markdown(f"####  Historical Revenue + {forecast_months}-Month Forecast  "
                 f"<span style='font-size:0.85rem;color:#888;'>({growth_scenario} · via {forecast_source})</span>",
                 unsafe_allow_html=True)
 
@@ -648,12 +658,12 @@ elif page == "📈 Sales Forecasting":
     st.pyplot(fig)
     plt.close()
 
-    # ── Forecast table ────────────────────────────────────────────
+    #  Forecast table 
     st.markdown("---")
     col_table, col_chart = st.columns([1, 1])
 
     with col_table:
-        st.markdown("#### 📋 Forecast Table")
+        st.markdown("####  Forecast Table")
         tbl = forecast_df.copy()
         tbl['Month']              = tbl['date'].dt.strftime('%b %Y')
         tbl['Forecast Revenue']   = tbl['forecast_revenue'].map(lambda x: f'₹{x:,.0f}')
@@ -677,7 +687,7 @@ elif page == "📈 Sales Forecasting":
         st.success(f"**Total Forecasted Revenue ({forecast_months}M): {fmt_inr(total_fc)}**")
 
     with col_chart:
-        st.markdown("#### 📊 Monthly Forecast Bar")
+        st.markdown("####  Monthly Forecast Bar")
         fig2, ax2 = plt.subplots(figsize=(7, 4))
         bar_colors = [fc_color] * len(forecast_df)
         bars = ax2.bar(forecast_df['date'].dt.strftime('%b\n%Y'),
@@ -701,9 +711,9 @@ elif page == "📈 Sales Forecasting":
         st.pyplot(fig2)
         plt.close()
 
-    # ── Scenario Comparison ───────────────────────────────────────
+    #  Scenario Comparison 
     st.markdown("---")
-    st.markdown("#### 🔀 Scenario Comparison")
+    st.markdown("####  Scenario Comparison")
 
     scenario_list = ["Baseline (LSTM)", "Optimistic (+10%)", "Pessimistic (-10%)",
                      "High Growth (+25%)", "Recession (-25%)"]
@@ -729,9 +739,9 @@ elif page == "📈 Sales Forecasting":
     st.pyplot(fig3)
     plt.close()
 
-    # ── YoY Analysis ──────────────────────────────────────────────
+    #  YoY Analysis 
     st.markdown("---")
-    st.markdown("#### 📅 Year-over-Year Revenue")
+    st.markdown("####  Year-over-Year Revenue")
 
     yoy_data = monthly.copy()
     yoy_data['year'] = yoy_data['month_dt'].dt.year
@@ -758,17 +768,17 @@ elif page == "📈 Sales Forecasting":
     plt.close()
 
 
-# ═══════════════════════════════════════════════════════════
+# 
 # PAGE 5 — Product Recommendations
-# ═══════════════════════════════════════════════════════════
-elif page == "💡 Product Recommendations":
-    st.title("💡 Product Recommendation System")
+# 
+elif page == " Product Recommendations":
+    st.title(" Product Recommendation System")
     st.markdown("Popularity-based & Collaborative Filtering")
     st.markdown("---")
 
-    tab1, tab2, tab3 = st.tabs(["🔥 Popular Products", "👤 Customer Recommendations", "🔗 Similar Products"])
+    tab1, tab2, tab3 = st.tabs([" Popular Products", " Customer Recommendations", " Similar Products"])
 
-    # ─── Tab 1: Popular Products ───
+    #  Tab 1: Popular Products 
     with tab1:
         st.markdown("#### Top Products by Popularity Score")
 
@@ -814,14 +824,14 @@ elif page == "💡 Product Recommendations":
         ax.set_title('Top 10 Most Popular Products', fontweight='bold')
         plt.tight_layout(); st.pyplot(fig); plt.close()
 
-    # ─── Tab 2: Customer Recommendations ───
+    #  Tab 2: Customer Recommendations 
     with tab2:
-        st.markdown("#### 👤 Customer Recommendation Engine")
+        st.markdown("####  Customer Recommendation Engine")
         st.markdown("Choose an **existing customer** or **build a custom profile** to get personalised recommendations.")
 
         mode = st.radio(
             "Customer source",
-            ["🔍 Existing Customer", "✏️ Custom Profile"],
+            [" Existing Customer", " Custom Profile"],
             horizontal=True, key="rec_mode"
         )
         st.markdown("---")
@@ -836,14 +846,14 @@ elif page == "💡 Product Recommendations":
                 txn_active = transactions[transactions['customer_id'].isin(all_cust_ids)]
                 user_item  = txn_active.groupby(['customer_id','product_id'])['quantity'].sum().unstack(fill_value=0)
 
-            # ── MODE 1: Existing Customer ────────────────────────
-            if mode == "🔍 Existing Customer":
+            #  MODE 1: Existing Customer 
+            if mode == " Existing Customer":
                 col_sel, col_prof = st.columns([1, 2])
 
                 with col_sel:
                     customer_id = st.selectbox("Select Customer ID", all_cust_ids[:200], key="exist_cust")
                     top_n_recs  = st.slider("No. of recommendations", 3, 15, 6, key="exist_n")
-                    get_btn     = st.button("🎯 Get Recommendations", use_container_width=True, key="exist_btn")
+                    get_btn     = st.button(" Get Recommendations", use_container_width=True, key="exist_btn")
 
                 with col_prof:
                     cust_row = customers[customers['customer_id'] == customer_id]
@@ -857,7 +867,7 @@ elif page == "💡 Product Recommendations":
                         p4, p5, p6 = st.columns(3)
                         p4.metric("Top Category", r['top_category'])
                         p5.metric("NPS",          r['net_promoter_score'])
-                        p6.metric("Churn Risk",   "⚠️ Yes" if r['churn'] == 1 else "✅ No")
+                        p6.metric("Churn Risk",   " Yes" if r['churn'] == 1 else " No")
 
                 if get_btn:
                     if customer_id in user_item.index:
@@ -871,7 +881,7 @@ elif page == "💡 Product Recommendations":
                             products[['product_id','product_name','product_category','mrp','rating','number_of_reviews']],
                             on='product_id', how='left')
 
-                        st.success(f"✅ Showing {len(recs)} recommendations for **{customer_id}**")
+                        st.success(f" Showing {len(recs)} recommendations for **{customer_id}**")
 
                         cols_per_row = 3
                         for row_start in range(0, len(recs), cols_per_row):
@@ -879,7 +889,7 @@ elif page == "💡 Product Recommendations":
                             card_cols = st.columns(cols_per_row)
                             for col, (_, rec) in zip(card_cols, row_recs.iterrows()):
                                 with col:
-                                    stars = "⭐" * int(round(rec['rating']))
+                                    stars = "" * int(round(rec['rating']))
                                     st.markdown(f"""
 <div style="background:#fff;border-radius:10px;padding:14px;
             box-shadow:0 2px 8px rgba(0,0,0,0.08);margin-bottom:10px;">
@@ -911,9 +921,9 @@ elif page == "💡 Product Recommendations":
                         fb = top_products.head(top_n_recs)[['product_name','product_category','mrp','rating']]
                         st.dataframe(fb, use_container_width=True, hide_index=True)
 
-            # ── MODE 2: Custom Profile ───────────────────────────
+            #  MODE 2: Custom Profile 
             else:
-                st.markdown("##### 🧑 Define Your Customer Profile")
+                st.markdown("#####  Define Your Customer Profile")
                 st.caption("Only key demographics needed — recommendations are driven by purchase behaviour of similar customers.")
 
                 ca, cb, cc = st.columns(3)
@@ -932,7 +942,7 @@ elif page == "💡 Product Recommendations":
                     c_top_n   = st.slider("No. of recommendations", 3, 15, 6, key="c_topn")
 
                 st.markdown("---")
-                custom_btn = st.button("🎯 Get Recommendations for Custom Profile",
+                custom_btn = st.button(" Get Recommendations for Custom Profile",
                                        use_container_width=True, key="custom_btn")
 
                 if custom_btn:
@@ -966,7 +976,7 @@ elif page == "💡 Product Recommendations":
                     pool_in_matrix = pool[pool['customer_id'].isin(user_item.index)]
                     top_similar    = pool_in_matrix.nlargest(15, 'similarity_score')['customer_id'].tolist()
 
-                    with st.expander("👥 Top matched customer profiles used to generate recommendations"):
+                    with st.expander(" Top matched customer profiles used to generate recommendations"):
                         show_cols = ['customer_id','age','gender','loyalty_tier',
                                      'top_category','income_level','frequency','recency','similarity_score']
                         match_display = pool_in_matrix[pool_in_matrix['customer_id'].isin(top_similar)][show_cols]
@@ -994,11 +1004,11 @@ elif page == "💡 Product Recommendations":
                         recs = recs_all.sort_values('final_score', ascending=False).head(c_top_n)
 
                         st.info(
-                            f"🧑 **Custom Profile** — Age {c_age} | {c_gender} | {c_loyalty} | "
+                            f" **Custom Profile** — Age {c_age} | {c_gender} | {c_loyalty} | "
                             f"Prefers: **{c_top_cat}** | {c_income} income | {c_device} | "
                             f"Buys every ~{c_recency} days"
                         )
-                        st.success(f"✅ {len(recs)} recommendations based on {len(top_similar)} similar customers")
+                        st.success(f" {len(recs)} recommendations based on {len(top_similar)} similar customers")
 
                         cols_per_row = 3
                         for row_start in range(0, len(recs), cols_per_row):
@@ -1006,9 +1016,9 @@ elif page == "💡 Product Recommendations":
                             card_cols = st.columns(cols_per_row)
                             for col, (_, rec) in zip(card_cols, row_recs.iterrows()):
                                 with col:
-                                    stars      = "⭐" * int(round(rec['rating']))
-                                    cat_badge  = "🎯 Preferred" if rec['product_category'] == c_top_cat else ""
-                                    prime_badge = "⭐ Prime" if rec['is_prime_eligible'] == 'Yes' else ""
+                                    stars      = "" * int(round(rec['rating']))
+                                    cat_badge  = " Preferred" if rec['product_category'] == c_top_cat else ""
+                                    prime_badge = " Prime" if rec['is_prime_eligible'] == 'Yes' else ""
                                     st.markdown(f"""
 <div style="background:#fff;border-radius:10px;padding:14px;
             box-shadow:0 2px 8px rgba(0,0,0,0.08);margin-bottom:10px;
@@ -1037,7 +1047,7 @@ elif page == "💡 Product Recommendations":
                                    for cat in recs['product_category'][::-1]]
                         )
                         axes[0].set_xlabel('Recommendation Score')
-                        axes[0].set_title('Score (🔴 = preferred category)', fontweight='bold', fontsize=9)
+                        axes[0].set_title('Score ( = preferred category)', fontweight='bold', fontsize=9)
 
                         cat_counts = recs['product_category'].value_counts()
                         axes[1].pie(cat_counts, labels=cat_counts.index, autopct='%1.0f%%',
@@ -1053,20 +1063,20 @@ elif page == "💡 Product Recommendations":
                         st.warning("No matching customers found in model. Try adjusting the profile.")
 
         else:
-            st.info("ℹ️ Run **05_Product_Recommendation.ipynb** to generate model files.")
+            st.info("ℹ Run **05_Product_Recommendation.ipynb** to generate model files.")
 
-    # ─── Tab 3: Similar Products ───
+    #  Tab 3: Similar Products 
     with tab3:
-        st.markdown("#### 🔗 Find Similar Products")
+        st.markdown("####  Find Similar Products")
 
         if 'item_sim' in models:
             item_sim_df = models['item_sim']
             prod_in_model = products[products['product_id'].isin(item_sim_df.index)].copy()
 
-            # ── Search controls ──────────────────────────────────
+            #  Search controls 
             s1, s2, s3 = st.columns([2, 1, 1])
             with s1:
-                search_query = st.text_input("🔍 Search product by name", placeholder="e.g. iPhone, Nike, Lipstick...")
+                search_query = st.text_input(" Search product by name", placeholder="e.g. iPhone, Nike, Lipstick...")
             with s2:
                 cat_filter_sim = st.selectbox("Filter by category",
                     ["All"] + sorted(prod_in_model['product_category'].unique().tolist()),
@@ -1074,7 +1084,7 @@ elif page == "💡 Product Recommendations":
             with s3:
                 top_n_sim = st.slider("Similar products to show", 3, 12, 5, key="item_sim_n")
 
-            # ── Apply filters ────────────────────────────────────
+            #  Apply filters 
             filtered_prods = prod_in_model.copy()
             if cat_filter_sim != "All":
                 filtered_prods = filtered_prods[filtered_prods['product_category'] == cat_filter_sim]
@@ -1086,7 +1096,7 @@ elif page == "💡 Product Recommendations":
             if filtered_prods.empty:
                 st.warning("No products match your search. Try a different name or clear the category filter.")
             else:
-                # ── Product selector from filtered results ────────
+                #  Product selector from filtered results 
                 st.markdown(f"**{len(filtered_prods)} product(s) found**")
                 selected = st.selectbox(
                     "Select a product",
@@ -1099,18 +1109,18 @@ elif page == "💡 Product Recommendations":
                     key="sim_product_select"
                 )
 
-                # ── Selected product details card ─────────────────
+                #  Selected product details card 
                 sel_row = products[products['product_id'] == selected].iloc[0]
                 st.markdown("---")
                 sc1, sc2, sc3, sc4, sc5 = st.columns(5)
                 sc1.metric("Category",  sel_row['product_category'])
                 sc2.metric("Brand",     sel_row['brand'])
                 sc3.metric("MRP",       f"₹{sel_row['mrp']:,}")
-                sc4.metric("Rating",    f"{sel_row['rating']} ⭐")
+                sc4.metric("Rating",    f"{sel_row['rating']} ")
                 sc5.metric("Reviews",   f"{int(sel_row['number_of_reviews']):,}")
                 st.markdown("---")
 
-                # ── Similarity options ────────────────────────────
+                #  Similarity options 
                 oc1, oc2 = st.columns([2, 1])
                 with oc1:
                     sim_category_filter = st.radio(
@@ -1121,7 +1131,7 @@ elif page == "💡 Product Recommendations":
                 with oc2:
                     min_rating = st.slider("Minimum rating", 1.0, 5.0, 3.0, 0.5, key="sim_min_rating")
 
-                find_btn = st.button("🔗 Find Similar Products", use_container_width=True, key="find_sim_btn")
+                find_btn = st.button(" Find Similar Products", use_container_width=True, key="find_sim_btn")
 
                 if find_btn:
                     sim_scores = item_sim_df[selected].drop(selected)
@@ -1149,18 +1159,18 @@ elif page == "💡 Product Recommendations":
                         st.warning("No similar products match the filters. Try lowering the minimum rating.")
                     else:
                         sel_name = sel_row['product_name']
-                        st.success(f"✅ {len(sim_df)} products similar to **{sel_name}**")
+                        st.success(f" {len(sim_df)} products similar to **{sel_name}**")
 
-                        # ── Product cards ─────────────────────────
+                        #  Product cards 
                         cols_per_row = 3
                         for row_start in range(0, len(sim_df), cols_per_row):
                             row_items = sim_df.iloc[row_start:row_start+cols_per_row]
                             card_cols = st.columns(cols_per_row)
                             for col, (_, item) in zip(card_cols, row_items.iterrows()):
                                 with col:
-                                    stars       = "⭐" * int(round(item['rating']))
+                                    stars       = "" * int(round(item['rating']))
                                     same_cat    = item['product_category'] == sel_cat
-                                    prime_badge = "⭐ Prime" if item['is_prime_eligible'] == 'Yes' else ""
+                                    prime_badge = " Prime" if item['is_prime_eligible'] == 'Yes' else ""
                                     sim_pct     = item['similarity'] * 100
                                     bar_fill    = int(sim_pct)
                                     st.markdown(f"""
@@ -1189,7 +1199,7 @@ elif page == "💡 Product Recommendations":
 
                         st.markdown("---")
 
-                        # ── Charts ────────────────────────────────
+                        #  Charts 
                         ch1, ch2 = st.columns(2)
 
                         with ch1:
@@ -1201,7 +1211,7 @@ elif page == "💡 Product Recommendations":
                                     color=bar_colors)
                             ax.set_xlabel('Cosine Similarity')
                             ax.set_title(
-                                f'Similarity Scores\n(🔵 same cat · 🟣 different cat)',
+                                f'Similarity Scores\n( same cat · 🟣 different cat)',
                                 fontweight='bold', fontsize=9)
                             ax.set_xlim(0, 1)
                             for i, (_, row) in enumerate(sim_df[::-1].iterrows()):
@@ -1236,8 +1246,8 @@ elif page == "💡 Product Recommendations":
                             st.pyplot(fig)
                             plt.close()
 
-                        # ── Summary table ─────────────────────────
-                        st.markdown("#### 📋 Comparison Table")
+                        #  Summary table 
+                        st.markdown("####  Comparison Table")
                         tbl = sim_df[['product_name','brand','product_category',
                                       'mrp','rating','similarity']].copy()
                         tbl.columns = ['Product','Brand','Category','MRP (₹)','Rating','Similarity']
@@ -1246,4 +1256,4 @@ elif page == "💡 Product Recommendations":
                         st.dataframe(tbl, use_container_width=True, hide_index=True)
 
         else:
-            st.info("ℹ️ Run **05_Product_Recommendation.ipynb** to generate model files.")
+            st.info("ℹ Run **05_Product_Recommendation.ipynb** to generate model files.")
